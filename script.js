@@ -32,3 +32,23 @@ const quizData = [
     correct: "d",
   },
 ];
+
+const questionEl = document.getElementById("question");
+const aText = document.getElementById("a");
+const bText = document.getElementById("b");
+const cText = document.getElementById("c");
+const dText = document.getElementById("d");
+aText.innerHTML = "text";
+let currentQuestion = 0;
+
+loadQuiz();
+
+function loadQuiz() {
+  const currentQuizData = quizData[currentQuestion];
+  questionEl.innerHTML = currentQuizData.question;
+  aText.innerHTML = currentQuizData.a;
+  bText.innerHTML = currentQuizData.b;
+  cText.innerHTML = currentQuizData.c;
+  dText.innerHTML = currentQuizData.d;
+  currentQuestion++;
+}
